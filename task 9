@@ -1,0 +1,30 @@
+
+interface Chargeable {
+    void chargingFee();
+}
+
+abstract class Vehicle {
+
+    abstract void parkingFee();
+}
+
+class ElectricCar extends Vehicle implements Chargeable {
+
+    void parkingFee() {
+        System.out.println("Parking Fee: Rs. 100");
+    }
+
+    public void chargingFee() {
+        System.out.println("Charging Fee: Rs. 50");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        ElectricCar e = new ElectricCar();
+
+        e.parkingFee();
+        e.chargingFee();
+    }
+}
