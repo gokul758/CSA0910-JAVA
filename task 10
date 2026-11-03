@@ -1,0 +1,24 @@
+
+class Vehicle {
+
+    private String vehicleNo;
+
+    public void setVehicleNo(String vehicleNo) {
+        this.vehicleNo = vehicleNo;
+    }
+
+    public String getVehicleNo() {
+        return vehicleNo;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Vehicle v = new Vehicle();
+
+        v.setVehicleNo("TN01AB1111");
+
+        System.out.println("Vehicle Number: " + v.getVehicleNo());
+    }
+}
