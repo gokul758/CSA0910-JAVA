@@ -1,0 +1,40 @@
+
+class Vehicle {
+    String vehicleNo;
+    String type;
+
+    Vehicle(String vehicleNo, String type) {
+        this.vehicleNo = vehicleNo;
+        this.type = type;
+    }
+    void display() {
+        System.out.println("Vehicle Number: " + vehicleNo);
+        System.out.println("Vehicle Type: " + type);
+    }
+}
+class ParkingSlot {
+    int slotNo;
+    boolean occupied;
+    ParkingSlot(int slotNo) {
+        this.slotNo = slotNo;
+        this.occupied = false;
+    }
+    void parkVehicle() {
+        if (!occupied) {
+            occupied = true;
+            System.out.println("Vehicle Parked Successfully");
+        } else {
+            System.out.println("Slot Already Occupied");
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+
+        Vehicle v = new Vehicle("TN01AB1111", "Car");
+        ParkingSlot p = new ParkingSlot(101);
+
+        v.display();
+        p.parkVehicle();
+    }
+}
