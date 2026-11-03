@@ -1,0 +1,47 @@
+
+class Vehicle {
+
+    double rate;
+
+    Vehicle(double rate) {
+        this.rate = rate;
+    }
+
+    double calculateFee() {
+        return rate;
+    }
+}
+
+class Car extends Vehicle {
+
+    Car() {
+        super(30);
+    }
+}
+
+class EBike extends Vehicle {
+
+    EBike() {
+        super(20);
+    }
+}
+
+class DeliveryVan extends Vehicle {
+
+    DeliveryVan() {
+        super(60);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car c = new Car();
+        EBike e = new EBike();
+        DeliveryVan d = new DeliveryVan();
+
+        System.out.println("Car Fee: Rs. " + c.calculateFee());
+        System.out.println("E-Bike Fee: Rs. " + e.calculateFee());
+        System.out.println("Delivery Van Fee: Rs. " + d.calculateFee());
+    }
+}
