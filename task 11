@@ -1,0 +1,31 @@
+
+class Parking {
+
+    String vehicleNo;
+    double fee;
+
+    void park(String no) {
+        vehicleNo = no;
+        System.out.println("Vehicle Parked: " + vehicleNo);
+    }
+
+    void calculateFee(int hours) {
+        fee = hours * 30;
+        System.out.println("Parking Fee: Rs. " + fee);
+    }
+
+    void exit() {
+        System.out.println("Vehicle Exited Successfully");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Parking p = new Parking();
+
+        p.park("TN01AB1111");
+        p.calculateFee(3);
+        p.exit();
+    }
+}
