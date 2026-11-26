@@ -1,0 +1,47 @@
+
+public class Q1 {
+    static String usingString(int n) {
+        String ticket = "";
+        for (int i = 1; i <= n; i++) {
+            ticket = ticket + "Field" + i + " ";
+        }
+        return ticket;
+    }
+
+    static String usingBuilder(int n) {
+        StringBuilder ticket = new StringBuilder();
+        for (int i = 1; i <= n; i++) {
+            ticket.append("Field").append(i).append(" ");
+        }
+        return ticket.toString();
+    }
+
+    static String usingBuffer(int n) {
+        StringBuffer ticket = new StringBuffer();
+        for (int i = 1; i <= n; i++) {
+            ticket.append("Field").append(i).append(" ");
+        }
+        return ticket.toString();
+    }
+
+    public static void main(String[] args) {
+        int n = 50;
+
+        long start = System.nanoTime();
+        String s = usingString(n);
+        long end = System.nanoTime();
+        System.out.println("String Time: " + (end-start) + " ns");
+
+        start = System.nanoTime();
+        StringBuilder b = new StringBuilder(usingBuilder(n));
+        end = System.nanoTime();
+        System.out.println("StringBuilder Time: " + (end-start) + " ns");
+
+        start = System.nanoTime();
+        StringBuffer bf = new StringBuffer(usingBuffer(n));
+        end = System.nanoTime();
+        System.out.println("StringBuffer Time: " + (end-start) + " ns");
+
+        System.out.println("Ticket: " + s);
+    }
+}
