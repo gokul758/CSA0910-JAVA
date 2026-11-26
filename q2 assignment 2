@@ -1,0 +1,52 @@
+
+import java.util.*;
+
+public class Q2 {
+    public static void main(String[] args) {
+
+        ArrayList<String> a = new ArrayList<>();
+        LinkedList<String> l = new LinkedList<>();
+        ArrayDeque<String> d = new ArrayDeque<>();
+
+        // Adding songs
+        a.add("Song A");
+        a.add("Song B");
+        a.add("Song C");
+
+        l.add("Song A");
+        l.add("Song B");
+        l.add("Song C");
+
+        d.add("Song A");
+        d.add("Song B");
+        d.add("Song C");
+
+        System.out.println("ArrayList: " + a);
+        System.out.println("LinkedList: " + l);
+        System.out.println("ArrayDeque: " + d);
+
+        // Insert at front
+        a.add(0, "New Song");
+        l.addFirst("New Song");
+        d.addFirst("New Song");
+
+        System.out.println("\nAfter adding at front:");
+        System.out.println("ArrayList: " + a);
+        System.out.println("LinkedList: " + l);
+        System.out.println("ArrayDeque: " + d);
+
+        // Access kth element
+        System.out.println("\nArrayList element: " + a.get(2));
+        System.out.println("LinkedList element: " + l.get(2));
+
+        // Remove first element
+        a.remove(0);
+        l.removeFirst();
+        d.removeFirst();
+
+        System.out.println("\nAfter removal:");
+        System.out.println("ArrayList: " + a);
+        System.out.println("LinkedList: " + l);
+        System.out.println("ArrayDeque: " + d);
+    }
+}
