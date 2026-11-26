@@ -1,0 +1,41 @@
+
+import java.util.*;
+
+public class Q4 {
+    public static void main(String[] args) {
+
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        TreeMap<Integer, String> treeMap = new TreeMap<>();
+        LinkedHashMap<Integer, String> linkedMap = new LinkedHashMap<>();
+
+        // Adding medicines
+        hashMap.put(103, "Paracetamol");
+        hashMap.put(101, "Crocin");
+        hashMap.put(102, "Vitamin C");
+
+        treeMap.putAll(hashMap);
+        linkedMap.put(103, "Paracetamol");
+        linkedMap.put(101, "Crocin");
+        linkedMap.put(102, "Vitamin C");
+
+        System.out.println("HashMap: " + hashMap);
+        System.out.println("TreeMap: " + treeMap);
+        System.out.println("LinkedHashMap: " + linkedMap);
+
+        // Searching medicine
+        System.out.println("\nMedicine with code 101: "
+                + hashMap.get(101));
+
+        // Display sorted report
+        System.out.println("\nMedicines in code order:");
+        for (Map.Entry<Integer, String> e : treeMap.entrySet()) {
+            System.out.println(e.getKey() + " - " + e.getValue());
+        }
+
+        // Display insertion order
+        System.out.println("\nMedicines in insertion order:");
+        for (Map.Entry<Integer, String> e : linkedMap.entrySet()) {
+            System.out.println(e.getKey() + " - " + e.getValue());
+        }
+    }
+}
